@@ -4,6 +4,31 @@ import time
 
 def twit_bot(consumer_key, consumer_secret, dev_key, dev_secret, search, num_tweets, like=False, retweet=False,
              cooldown=None):
+    """
+    A simple Twitter bot that allows for a like or retweet action to be carried out on a pre-determined number of
+    search results.
+
+    :param consumer_key: type str
+        user's consumer key, available at https://developer.twitter.com/
+    :param consumer_secret: type str
+        user's consumer secret, available at https://developer.twitter.com/
+    :param dev_key: type str
+        user's developer key, available at https://developer.twitter.com/
+    :param dev_secret: type str
+        user's developer secret, available at https://developer.twitter.com/
+    :param search: type str
+        the term to be searched for
+    :param num_tweets: type int
+        the number of tweets to be liked and/or retweeted
+    :param like: type bool
+        whether search results should be liked ("favorited")
+    :param retweet: type bool
+        whether search results should be retweeted
+    :param cooldown: type int
+        if value is entered, the cool-down time (in seconds) between each search result
+    :return: type None
+        returns nothing
+    """
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(dev_key, dev_secret)
