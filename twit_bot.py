@@ -28,3 +28,12 @@ def twit_bot(consumer_key, consumer_secret, dev_key, dev_secret, search, num_twe
             break
 
     return
+
+
+c_key = "YOUR_CONSUMER_KEY"
+c_sec = "YOUR_CONSUMER_SECRET"
+d_key = "YOUR_DEV_KEY"
+d_sec = "YOUR_DEV_SECRET"
+
+
+twit_bot(c_key, c_sec, d_key, d_sec, "#deeplearning", 20, like=True, retweet=True)
